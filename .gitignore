@@ -1,0 +1,32 @@
+# dependencies
+/node_modules
+
+# production
+/dist
+/.next
+/.vercel
+
+# Storybook
+/out
+/storybook-static
+
+# misc
+.DS_Store
+.env
+.env.local
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Vite cache
+/.vite
+/.vitepress
+/.cache
+
+# TypeScript cache
+*.tsbuildinfo
+
+# VSCode
+.vscode
