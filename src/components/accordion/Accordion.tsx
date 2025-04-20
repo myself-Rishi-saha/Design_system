@@ -15,6 +15,7 @@ interface AccordionProps {
     content: React.ReactNode;
     props?: Omit<AccordionProps, 'title' | 'children'>;
   }[];
+  isHorizontal?: boolean;
 }
 
 export const Accordion: React.FC<AccordionProps> = ({
@@ -26,7 +27,8 @@ export const Accordion: React.FC<AccordionProps> = ({
   color,
   count,
   titlePrefix = 'Item',
-  items
+  items,
+  isHorizontal = false,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -92,7 +94,7 @@ export const Accordion: React.FC<AccordionProps> = ({
   }
 
   return (
-    <div className="space-y-4">
+    <div className={"space-y-4 w-screen" + (isHorizontal ? ' flex flex-wrap' : '')}>
       {items ? (
         items.map((item, i) => (
           <Accordion

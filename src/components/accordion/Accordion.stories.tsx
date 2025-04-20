@@ -20,6 +20,9 @@ export default {
     disabled: { control: 'boolean' },
     color: { control: 'color' },
   },
+  count: {
+    control: 'number',},
+
   decorators: [
     (Story) => (
       <div className="p-6 max-w-md">
@@ -91,4 +94,17 @@ export const CustomColor = Template.bind({});
 CustomColor.args = {
   title: 'Custom Color Accordion',
   color: '#6b46c1',
+};
+
+export const multipleAccordion = Template.bind({});
+multipleAccordion.args = {
+  title: 'multiple Accordion',
+  count: 5,
+};
+
+export const horizontalAccordion = Template.bind({});
+horizontalAccordion.args = {
+  title: 'horizontal accordion',
+  count: 5,
+  isHorizontal: true,
 };

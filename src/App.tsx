@@ -14,7 +14,7 @@ function App() {
         variant="withSearch"
       />
 
-      <Accordion title="Accordion">
+      <Accordion title="Accordion" count={5} isHorizontal={true}>
         <p className="mb-2">This is the content inside the accordion.</p>
         <ul className="list-disc pl-5 space-y-1">
           <li>List item 1</li>
